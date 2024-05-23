@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDeals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgb(9, 73, 133);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .container h1{
+            color: azure;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .price {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 10px;
+        }
+        form {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .row h4{
+            color: azure;
+        }
+        .price{
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">MENS WEAR</h1>
+        <form id="filter-form">
+            <div class="input-group">
+                <span class="input-group-text">Min Price</span>
+                <input type="number" id="min-price" class="form-control" placeholder="0">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">Max Price</span>
+                <input type="number" id="max-price" class="form-control" placeholder="3000">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="filterProducts()">Filter</button>
+        </form>
+        <div class="row" id="product-list">
+            <div class="col-md-3">
+                <div class="product-card" data-price="1000">
+                    <img src="https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?t=st=1716393347~exp=1716396947~hmac=bba78e2a33c412421856edd1b57128ee4d9d785fa65cd0c3020e569e73dac2c0&w=360" alt="Product Image">
+                    <h4>DENNIS LINGO</h4>
+                    <p class="price">Price: ₹1000</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1500">
+                    <img src="https://img.freepik.com/free-photo/handsome-young-man-standing-isolated-grey_171337-10382.jpg?t=st=1716393464~exp=1716397064~hmac=3ed140bafb42759314c92008547c495ea963d6bff36ebf71cc150452cf7054de&w=360" alt="Product Image">
+                    <h4>FRENCH CROWN</h4>
+                    <p class="price">Price: ₹1500</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1999">
+                    <img src="https://img.freepik.com/premium-photo/man-with-fashion-tailored-uhd-wallpapar_853645-107214.jpg?w=360" alt="Product Image">
+                    <h4> TOMMY HILFIGER</h4>
+                    <p class="price">Price: ₹1999</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1299">
+                    <img src="https://img.freepik.com/free-photo/high-fashion-look-young-stylish-confident-happy-handsome-businessman-model-man-blue-suit-clothes-street-sunglasses-sky_158538-9486.jpg?t=st=1716393543~exp=1716397143~hmac=a7e6351dfd86f54cec30837a66d0fcc9d70cb3d4917c24ae2062e848bd498360&w=360" alt="Product Image">
+                    <h4> LEVI'S</h4>
+                    <p class="price">Price: ₹1299</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" id="product-list">
+            <div class="col-md-3">
+                <div class="product-card" data-price="2599">
+                    <img src="https://img.freepik.com/premium-photo/portrait-groom-gray-suit-orange-vest_419896-15410.jpg?w=360" alt="Product Image">
+                    <h4>U.S.POLO ASSN</h4>
+                    <p class="price">Price:₹2599</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1399">
+                    <img src="https://img.freepik.com/free-photo/business-man-looking-his-watch_23-2148018645.jpg?t=st=1716394219~exp=1716397819~hmac=4d05a7e554fb25ba8f9a450304389462e95325c38cf1339cf67d53031fcf81bc&w=360" alt="Product Image">
+                    <h4>FRENCH CROWN</h4>
+                    <p class="price">Price: ₹1399</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1799">
+                    <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4914.jpg?t=st=1716394258~exp=1716397858~hmac=41b2114fcd210baf04f601819e95b495b836664b8e32b78ba42572d46f964a2e&w=360" alt="Product Image">
+                    <h4>WRANGLER </h4>
+                    <p class="price">Price:₹1799</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="3000">
+                    <img src="https://img.freepik.com/free-photo/cheerful-young-man-dressed-formalwear_171337-10729.jpg?t=st=1716394320~exp=1716397920~hmac=7124939a190f6157353bb62c41000dd83ce53d297bc9f24e8a6b203fbf4bb6d9&w=360" alt="Product Image">
+                    <h4>LEE MEN</h4>
+                    <p class="price">Price:₹3000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterProducts() {
+            const minPrice = parseInt(document.getElementById("min-price").value) || 0;
+            const maxPrice = parseInt(document.getElementById("max-price").value) || Infinity;
+            const products = document.querySelectorAll(".product-card");
+
+            products.forEach(function(product) {
+                const price = parseInt(product.getAttribute("data-price"));
+                if (price >= minPrice && price <= maxPrice) {
+                    product.parentElement.style.display = "block";
+                } else {
+                    product.parentElement.style.display = "none";
+                }
+            });
+        }
+
+        document.getElementById("filter-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            filterProducts();
+        });
+    </script>
+</body>
+</html>

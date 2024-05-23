@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(9,73,133);
+        }
+   #carouselExample .carousal-item img{
+    width: 100px;
+    height: 100px;
+   }
+   .container{
+    display: flex;
+    gap:20px;
+   grid-template-columns: repeat(auto-fit,mimax(320px,1fr));
+    max-width: 1110px;
+    margin:70px auto;
+   }
+   
+  .grid-item{
+    display: grid;
+    justify-content:center;
+    align-items: center;
+
+  }
+    .card{
+      max-width: 351px;
+      height: 450px;
+      border-radius: 10px;
+    }
+   .card-content{
+    padding: 20px;
+    margin-left: 10px;
+   }
+   .card img{
+    margin-top:0px;
+    border-radius: 8px;
+   }
+   .carousel-inner{
+    padding: 30px;
+   }
+  
+  
+   </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">service</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Concact</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    </div>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?t=st=1711955144~exp=1711958744~hmac=a89df2f56a1c8cc082e64806b78aa56b24f795f906133b82addb8d674e21ed4f&w=900" class="d-block w-100" alt="..." height="600px" width="500px">
+          </div>
+          <div class="carousel-item">
+            <img src=" https://img.freepik.com/free-photo/young-man-wearing-dark-shirt-jeans-carried-several-bags-go-shopping-with-credit-card_1150-27747.jpg?t=st=1711955374~exp=1711958974~hmac=c78cd347defae65d3a1a51df4e89553246a3e935eae5990f71345f7d5aa17aee&w=900" class="d-block w-100" alt="..." height="600px" width="500px">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-photo/two-women-shopping-by-market-with-shopping-cart_1303-16453.jpg?t=st=1711955502~exp=1711959102~hmac=ac33f349b743738bd617b9cbda8d3e42788c45560432331d7102a57b3adbbee0&w=900" class="d-block w-100" alt="..." height="600px" width="500px">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <section class="container">
+        <div class="gird-item">
+          <div class="card">
+            <img src="https://static.aceomni.cmsaceturtle.com/prod%2Fproduct-image%2Faceomni%2FWrangler%2FMyntra%2FWMSH005725%2FWMSH005725_1.jpg" style="width: 300px;" height="300px" >
+          <div class="card-content">
+            <h2> MENS WEAR</h2>
+            <a href="mens wear.html"><button class="btn btn-warning">shop now</button></a>
+           
+          </div>
+          </div>
+        </div>
+
+        <div class="gird-item">
+          <div class="card">
+            <img src="https://img.freepik.com/free-photo/portrait-attractive-stylish-smiling-woman-walking-city-street-pink-coat-floral-dress_285396-1260.jpg?t=st=1711955689~exp=1711959289~hmac=729ebcbbdedeb725b8222165ef76642969c0b98ebb27398c97abd2ec12fe1440&w=740" style="width: 300px;" height="300px" >
+          <div class="card-content">
+            <h2> WOMENS WEAR</h2>
+            <a href="women wear.html"><button class="btn btn-success">shop now</button></a>
+          </div>
+          </div>
+        </div>
+
+        <div class="gird-item">
+          <div class="card">
+            <img src="https://img.freepik.com/free-photo/two-little-lovers-are-ready-travel_329181-7497.jpg?t=st=1711955804~exp=1711959404~hmac=9a5211eea9efffbdb2f9083da00769ff9d3a8d328b1cae3235024eff765d2b8f&w=740" style="width: 300px;" height="300px">
+          <div class="card-content">
+            <h2> KIDS WEAR</h2>
+            <a href="kids.html"><button class="btn btn-warning">shop now</button></a>
+            
+          </div>
+          </div>
+        </div>
+      </section> 
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDeals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgb(9, 73, 133);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .container h1{
+            color: azure;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .price {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 10px;
+        }
+        form {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .row h4{
+            color: azure;
+        }
+        .price{
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">WOMENS WEAR</h1>
+        <form id="filter-form">
+            <div class="input-group">
+                <span class="input-group-text">Min Price</span>
+                <input type="number" id="min-price" class="form-control" placeholder="0">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">Max Price</span>
+                <input type="number" id="max-price" class="form-control" placeholder="3000">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="filterProducts()">Filter</button>
+        </form>
+        <div class="row" id="product-list">
+            <div class="col-md-3">
+                <div class="product-card" data-price="1000">
+                    <img src="https://img.freepik.com/free-photo/picture-young-lovely-caucasian-female-with-dark-hair-yellow-blue-dress-gold-shoes-shows-different-poses-camera_132075-8346.jpg?t=st=1716394918~exp=1716398518~hmac=0309093fa82fed2a868465ae0b305aac8dd674fab80438927b450562ed1512cb&w=360" alt="Product Image">
+                    <h4>SKYLEE</h4>
+                    <p class="price">Price: ₹1000</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1500">
+                    <img src="https://img.freepik.com/free-photo/young-woman-beautiful-yellow-dress_1303-17542.jpg?t=st=1716386521~exp=1716390121~hmac=542fa9f6aed5569abaae27af1d17190c55a711508de21094cfb536c248b6889a&w=360" alt="Product Image">
+                    <h4>CHARVI CREATION</h4>
+                    <p class="price">Price: ₹1500</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1999">
+                    <img src="https://img.freepik.com/free-photo/woman-dress_1303-3764.jpg?t=st=1716394975~exp=1716398575~hmac=4f0be5db15a9565acde0876e919b2d79e0fc7f65d6fff30788866ed3f673fb06&w=360" alt="Product Image">
+                    <h4> GVS SHOPPE</h4>
+                    <p class="price">Price: ₹1999</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1299">
+                    <img src="https://img.freepik.com/free-photo/beautiful-woman-elegant-wome-wear-posing-stylish-bohemian-interior_273443-4290.jpg?t=st=1716395058~exp=1716398658~hmac=8138281f57042b7f78360286f92b763fbd374823928a8b9da6878540111d1b59&w=360" alt="Product Image">
+                    <h4>DOONGARI WALA</h4>
+                    <p class="price">Price: ₹1299</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" id="product-list">
+            <div class="col-md-3">
+                <div class="product-card" data-price="2599">
+                    <img src="https://img.freepik.com/free-photo/young-indian-woman-wearing-sari_23-2149400847.jpg?t=st=1716387092~exp=1716390692~hmac=6632601c21107f160ae8d3dd357298c0b42892895e44d950f23c95f44bdf081e&w=360" alt="Product Image">
+                    <h4> FASHION DAY</h4>
+                    <p class="price">Price:₹2599</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1399">
+                    <img src="https://img.freepik.com/premium-photo/portrait-young-beautiful-girl-wearing-white-colorful-dress-posing-grey-background_136354-13087.jpg?w=360" alt="Product Image">
+                    <h4>WOMENELEGENCE</h4>
+                    <p class="price">Price: ₹1399</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="1799">
+                    <img src="https://img.freepik.com/premium-photo/women-s-kanjivaram-soft-silk-banarasi-saree_953724-879.jpg?w=360" alt="Product Image">
+                    <h4>KASHIVA SAREE</h4>
+                    <p class="price">Price:₹1799</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card" data-price="3000">
+                    <img src="https://img.freepik.com/premium-photo/beautiful-young-girl-using-mobile-phone-smartphone-gray-background_136354-14597.jpg?w=360" alt="Product Image">
+                    <h4>AVANTIKA FASHION</h4>
+                    <p class="price">Price:₹3000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterProducts() {
+            const minPrice = parseInt(document.getElementById("min-price").value) || 0;
+            const maxPrice = parseInt(document.getElementById("max-price").value) || Infinity;
+            const products = document.querySelectorAll(".product-card");
+
+            products.forEach(function(product) {
+                const price = parseInt(product.getAttribute("data-price"));
+                if (price >= minPrice && price <= maxPrice) {
+                    product.parentElement.style.display = "block";
+                } else {
+                    product.parentElement.style.display = "none";
+                }
+            });
+        }
+
+        document.getElementById("filter-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            filterProducts();
+        });
+    </script>
+</body>
+</html>
